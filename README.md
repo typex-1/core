@@ -132,7 +132,7 @@ Game based Cryptographic Proofs
 ## Resource
 
 1. Project page [auditable-credential-webpage](https://auditable-credential.github.io/auditable-credential-webpage/)
-2. Documentation [auditable-credential-documentation](https://auditable-credential.github.io/auditable-credential-documentation/)
+2. Documentation [auditable-credential-documentation](https://typex-1.github.io/auditable-credential-documentation/)
 3. Performance testing records
    * Elliptic Curves version [Elliptic_Curves_192_result](./test/result/ECC_192_result.csv), [Elliptic_Curves_256_result](./test/result/ECC_256_result.csv).
    * Integers Group version [Integers_Group_256_result](./test/result/DL_256_result.csv), [Integers_Group_1024_result](./test/result/DL_1024_result.csv).
