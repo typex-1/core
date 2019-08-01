@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>AuditableBlindCA - Verifying</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- // Fonts -->
+  
+  <script type="text/javascript" src= "js/jquery.min.js"></script>
+  <script type="text/javascript" src= "js/verifying.js"></script>
+
+  <!-- Math -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+  <!-- Math -->
+  
+</head>
+<body>
+    <!-- Vertical Timeline -->
+    <section id="conference-timeline">
+    <div class="container">
+    <ol class="timeline">
+    <li>
+    <p class="lined">Preparation </p>
+    <a href = "index" id = "a_index"><span class="pointed"></span></a>
+    </li>
+
+    <li>
+    <p class="lined">Issuing</p>
+    <a href = "issuing" id = "a_issuing"><span class="pointed"></span></a>
+    </li>
+
+    <li>
+    <p class="lined">Verifying</p>
+    <a href = "verifying" id = "a_verifying"><span class="pointed"></span></a>
+    </li>
+
+    <li>
+    <p class="line">Tracing</p>
+    <a href = "tracing" id = "a_tracing"><span class="point"></span></a>
+    </li>
+    </ol>
+    </div>
+
+    Smart Contract Registration
+    <hr>
+    <!-- Article -->
+    <div class="timeline-article">
+    
+    <div class="content-right-container">
+
+    <div class="content-right">
+    <p>
+    <span class="article-number">User</span>
+    <label for="description"> $y=$ </label><span class=""><input id = "y1" value=<%= y %> ></input></span><br>
+    <label for="description"> $\zeta_1=$</label><span class=""><input id = "zeta1" value=<%= zeta1 %>></input></span><br>
+    <label for="description"> $\rho=$ </label><span class=""><input id = "rho" value=<%= roi %>></input></span><br>
+    <label for="description">$\omega=$ </label><span class=""><input id = "omega" value=<%= omega %>></input></span><br>
+    <label for="description"> $\sigma_1=$</label><span class=""><input id = "sigma1" value=<%= sigma1 %>></input></span><br>
+    <label for="description"> $\sigma_2=$</label><span class=""><input id = "sigma2" value=<%= sigma2 %>></input></span><br>
+    <label for="description"> $\delta=$</label><span class=""><input id = "delta" value=<%= delta %>></input></span><br>
+    <!-- m = <span class=""><input id = "m"></input></span><br> -->
+    <hr>
+
+    $\mathsf{Cred}=(\Sigma,m), \Sigma=(\zeta_1,\rho, \omega, \sigma_1, \sigma_2, \delta)$
+    <br>
+    <a href = "javascript: void(0)" class="" id = "button2" >Show full credential</a>
+    </p>
+    </div>
+    </div>
+    </div>
+    <!-- // Article --> 
+    
+    <!-- Article -->
+    <div class="timeline-article">
+    <div class="content-left-container">
+    <div class="content-left">
+    <p>
+    <span class="article-number" style ="font-size:42px;left:-140px">Verifier</span>
+    <a href = "javascript: void(0)" class="" id = "verifyCred">VerifyCred</a><br>
+    <label class="textdescription"> $y=$ </label><span class=""><input id = "y2" value=<%=y %>></input></span><br>
+    <label class="textdescription"> $\omega+\delta=$ </label><span class=""><input id = "omegadelta"></input></span><br>
+    <label class="textdescription"> $\mathsf{hashresult}=$</label> <span class=""><input id = "hashresult"></input></span><br>
+    <hr>
+    <p id = "success-res" style = "color: #1f3583; display: none" >$\omega+\delta=\mathsf{hashresult}$. <br> The credential is verified successfully. </p>
+    <p id = "fail-res" style = "color: #1f3583; display: none">
+      Sorry...</p>
+    </p>
+    </div>
+    </div>
+    <div class="meta-date">
+    <span class="data">credential <br> &nbsp;</span>
+    <span class="date">&larr;</span>
+    </div>
+    </div>
+      <!-- // Article -->
+
+    </div> 
+    <!-- <div class="timeline-end">End</div> -->
+  </section>
+  <!-- // Vertical Timeline -->
+  
+  
+<div class="ca-popup" id="ca-popup-2">
+  <div class="ca-popup-content">
+    <span class="ca-exout">&times;</span>
+    <div class="ca-part">
+      <h1>Mr Frog's Credential</h1>
+    </div>
+    
+    <img src="img/frog1.png" class="ca-cover">
+    <div class="ca-part">
+      <br>
+     <!--  <img class="ca-subscribe" src="../static/img/button.png">
+      <img class="ca-logo" src="../static/img/logo.png"> -->
+      <label class="textdescription"> Name: </label><span class=""><input id = "name2" value=<%=name%>  ></input></span><br> 
+      <label class="textdescription"> Age: </label><span class=""><input id = "age2" value=<%=age%>></input></span><br> 
+      <label class="textdescription"> Birthday: </label><span class=""><input id = "birthday2" value=<%=bir%>></input></span><br> 
+      <label class="textdescription"> Nationality: </label><span class=""><input id = "nationality2" value=<%=nation%>></input></span><br> 
+      <label class="textdescription"> Gender: </label><span class=""><input id = "gender2" value=<%=gender%>></input></span><br> 
+      <label class="textdescription"> Address: </label><span class=""><input id = "address2" value=<%=address%>></input></span>
+      
+      <hr>
+      
+      <label class="textdescription"> Issuer's PK = </label><span class=""><input id = "ipk" value=<%=y%>></input></span> <br>
+      $\mathsf{Signature}=H_2(\zeta_1|g^\rho y^\omega|g^{\sigma_1}\zeta_1^{\delta}|h^{\sigma_2}\zeta_2^{\delta}|m)$
+      <br><br><br>
+      <!-- <label class="textdescription">&#961; = </label> <span class=""><input id = "rho"></input></span><br>
+    <label class="textdescription">&#969; = </label> <span class=""><input id = "omega"></input></span><br>
+    <label class="textdescription">&#963;<sub>1</sub> = </label> <span class=""><input id = "sigma1"></input></span><br>
+    <label class="textdescription">&#963;<sub>2</sub> = </label> <span class=""><input id = "sigma2"></input></span><br>
+    <label class="textdescription">&#948; = </label> <span class=""><input id = "delta"></input></span><br> -->
+      
+      <p> $g,h$ are generators of ECC, which are publicly to each entity.
+       $\rho, \omega, \sigma_1, \sigma_2, \delta$ is known to the user.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+renderMathInElement(document.body, {
+  delimiters: [{
+    left: "$$",
+    right: "$$",
+    display: true
+  }, {
+    left: "$",
+    right: "$",
+    display: false
+  }]
+});
+</script>
+
+</body>
+</html>

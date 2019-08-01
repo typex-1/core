@@ -1,0 +1,29 @@
+{
+  "name": "blindca",
+  "version": "1.0.0",
+  "description": "try to take over the world",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "Feng",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-register": "^6.22.0",
+    "truffle-oasis": "^5.0.4",
+    "oasis-compile": "^2.0.0",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.0",
+    "webpack": "^2.7.0",
+    "json-loader": "^0.5.4",
+    "babel-loader": "^6.2.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "express-session": "^1.16.1",
+    "thrift": "^0.12.0",
+    "web3c": "^2.0.5"
+  }
+}

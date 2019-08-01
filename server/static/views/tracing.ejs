@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>AuditableBlindCA - Tracing</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- // Fonts -->
+
+  <!-- Math -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+  <!-- Math -->
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src= "js/trace.js"></script>
+</head>
+
+<body>
+  <!-- Vertical Timeline -->
+  <section id="conference-timeline">
+    <div class="container">
+      <ol class="timeline">
+        <li>
+          <p class="lined">Preparation </p>
+          <a href="index" id="a_index"><span class="pointed"></span></a>
+        </li>
+        <li>
+          <p class="lined">Issuing</p>
+          <a href="issuing" id="a_issuing"><span class="pointed"></span></a>
+        </li>
+        <li>
+          <p class="lined">Verifying</p>
+          <a href="verifying" id="a_verifying"><span class="pointed"></span></a>
+        </li>
+        <li>
+          <p class="lined">Tracing</p>
+          <a href="tracing" "a_tracing"><span class="pointed"></span></a>
+        </li>
+      </ol>
+    </div>
+    <div class="timeline-article" id="smhtml">
+    </div>
+    Credential Tracing
+    <hr>
+    <!-- Article -->
+    <div class="timeline-article">
+      <div class="content-left-container">
+        <div class="content-left">
+          <p>issuer stored $\xi^v$ as the user's identity. <span class="article-number" style="font-size:42px">issuer<sup>*</sup></span></p>
+          <br>
+          <ul>
+            <li> $\xi^v=$ <input id="xiupsilon" value='<%= xiv%>'></input></li>
+          </ul>
+        </div>
+        <span class="timeline-author"></span>
+      </div>
+      <div class="content-right-container">
+        <div class="content-right">
+          <p>
+            <span class="article-number" style="font-size:40px">BCSM<sup>*</sup></span>
+            The blockchain returns the user's identity<br><br>
+            <a href="javascript: void(0)" onclick="credential_tracing()" id="traceCred">Execute</a><br><br>
+            $\zeta_1=$ <input id="res_zeta_1"></input>
+          </p>
+        </div>
+      </div>
+      <div class="meta-date">
+        <span class="data"> $\xi^v$</span>
+        <span class="date">&rarr;</span>
+      </div>
+    </div>
+    <!-- // Article -->
+    Identity Tracing
+    <hr>
+    <!-- Article -->
+    <div class="timeline-article">
+      <div class="content-left-container">
+        <div class="content-left">
+          <p>Given the issuer the credential &#950;<sub>1</sub>. <br><br>
+            <span class="article-number" style="font-size:42px">issuer<sup>*</sup></span></p>
+          <ul>
+            <li> $\zeta_1=$ <input id="zeta_1" value='<%= zeta1%>'></li>
+          </ul>
+        </div>
+        <span class="timeline-author"></span>
+      </div>
+      <div class="content-right-container">
+        <div class="content-right">
+          <p>
+            <span class="article-number" style="font-size:40px">BCSM<sup>*</sup></span>
+            The blockchain returns the user's credential<br><br>
+            <a href="javascript: void(0)" onclick="identity_tracing()" id="traceIden">Execute</a><br><br>
+            $\xi^v=$ <input id="credential_xiupsilon"></input>
+          </p>
+        </div>
+      </div>
+      <div class="meta-date">
+        <span class="data"> $\zeta_1$</span>
+        <span class="date">&rarr;</span>
+      </div>
+    </div>
+    </div>
+    <!-- <div class="timeline-end">End</div> -->
+    <b>Tracing Log</b>
+    <hr>
+    <div style="width:100%; background: #e9ecef;">
+      <div id="smadress" style="display: none"><%= smadress%></div>
+      <div class="timeline-wrapper" id="tracelog">
+      </div>
+    </div>
+    <br><br>
+  </section>
+  <!-- // Vertical Timeline -->
+
+  <script>
+  renderMathInElement(document.body, {
+    delimiters: [{
+      left: "$$",
+      right: "$$",
+      display: true
+    }, {
+      left: "$",
+      right: "$",
+      display: false
+    }]
+  });
+  </script>
+</body>
+
+</html>

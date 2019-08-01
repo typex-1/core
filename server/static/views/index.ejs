@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>AuditableBlindCA - Preparation</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/normalize.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- // Fonts -->
+
+  <!-- Math -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
+  <!-- Math -->
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="js/index.js"></script> -->
+  <script type="text/javascript" src="js/genpk.js"></script>
+  
+</head>
+<body>
+  <!-- Vertical Timeline -->
+  
+  <section id="conference-timeline">
+    <div class="container">
+      <ol class="timeline">
+        <li>
+          <p class="lined">Preparation </p>
+          <a href="index" id="a_index"><span class="pointed"></span></a>
+        </li>
+        <li>
+          <p class="line">Issuing</p>
+          <a href="issuing" id="a_issuing"><span class="point"></span></a>
+        </li>
+        <li>
+          <p class="line">Verifying</p>
+          <a href="verifying" id="a_verifying"><span class="point"></span></a>
+        </li>
+        <li>
+          <p class="line">Tracing</p>
+          <a href="tracing" id="a_tracing"><span class="point"></span></a>
+        </li>
+      </ol>
+    </div>
+
+    <h2 style="position: relative;top: -10px;">
+      <center>Version: Elliptic Curve Cryptography <i class="fa fa-expeditedssl"></i></center>        
+    </h2>
+
+    <h3>
+    1. Set up parameters:
+    <a class="choosItem checked" id="Secp256k1">Secp256k1</a>
+    <a class="choosItem" id="Secp192k1" >Secp192k1</a>
+    </h3>
+    <hr>
+    
+    <!-- Article -->
+    <div class="timeline-article">
+      <div class="content-left-container">
+        <div class="content-left">
+          <p><span class="article-number">Issuer</span>
+            <label for="description">$a=$</label><span class=""><input id = "a1" ></input></span><br>
+            <label for="description">$b=$</label><span class=""><input id = "b1" ></input></span><br>
+            <label for="description">$p=$</label><span class=""><input id="p1" ></input></span><br>
+            <label for="description">$n=$</label><span class=""><input id = "n1" ></input></span><br>
+            <label for="description">$g=$</label><span class=""><input id="g1"></input></span><br>
+            <label for="description">$h=$</label><span class=""><input id="h1"></input></span><br>
+          </p>
+        </div>
+        <span class="timeline-author"></span>
+      </div>
+      <div class="content-right-container">
+        <div class="content-right">
+          <p> <span class="article-number">User</span>
+            <label for="description">$a=$</label><span class=""><input id = "a2" ></input></span><br>
+            <label for="description">$b=$</label><span class=""><input id = "b2" ></input></span><br>
+            <label for="description">$p=$</label><span class=""><input id="p2" ></input></span><br>
+            <label for="description">$n=$</label><span class=""><input id = "n2" ></input></span><br>
+            <label for="description">$g=$</label><span class=""><input id="g2"></input></span><br>            
+            <label for="description">$h=$</label><span class=""><input id="h2"></input></span><br>
+          </p>
+        </div>
+      </div>
+      <!--<div class="meta-date">
+    <span class="date">&rarr;</span>
+    </div>
+    -->
+    </div>
+    <!-- // Article -->
+  <h3>
+    2. Key Generation    
+  </h3>
+  
+  <hr>
+  <!-- Article -->
+  <div class="timeline-article">
+    <div class="content-left-container">
+      <div class="content-left">
+        <p class="sp">
+          Please click <a href="javascript: void(0)" class="" id="issuerkey">here</a> to generation issuer's public key and private key.<br>
+          <label class="textdescription">$x$ <font color="red">(private)</font> $=$ </label> <span class=""><input id="x"></input></span><br>
+          <label class="textdescription">$y$ (public) $=g^x=$ </label> <span class=""><input id="y"></input></span><br>
+          <label class="textdescription">$Z=H_1(p,q,g,h,y)=$ </label> <span class=""><input id="z1"></input></span><br>
+        </p>
+      </div>
+    </div>
+    <div class="content-right-container">
+      <div class="content-right">
+        <p class="sp">
+          Please click <a href="javascript: void(0)" class="" id="userkey">here</a> to generation user's public key and private key.<br><br>
+          <label class="textdescription">$\lambda$ <font color="red">(private)</font> $=$ </label><span class=""><input id="gamma"></input></span><br>
+          <label class="textdescription">$\xi$ (public) $=g^\lambda=$ </label><span class=""><input id="xi"></input></span><br>
+          <label class="textdescription">$Z=H_1(p,q,g,h,y)=$</label><span class=""><input id="z2"></input></span><br>
+        </p>
+      </div>
+      <!-- <span class="timeline-author">John Doe</span> -->
+    </div>
+    <!-- <div class="meta-date">
+    <span class="date">&larr;</span>
+    </div> -->
+  </div>
+  <!-- // Article -->
+  <h3>
+    3. Smart Contract Registration
+  </h3>  
+  <hr>
+  <b>Please do the following steps to deploy the privacy-preserving smart contract and register the parameters</b> <br><br>
+  <div style="width:100%; background: #e9ecef;">
+    <div class="timeline-wrapper">
+      <div class="node" id="node1" style="display: ''">
+        <h3><span class="myicon-tick-uncheck" id="myicon1"></span></h3>
+        <p> 3.1.Please <a href="javascript: void(0)" class="" id="confirm">ensure</a> that you have installed the <a href="https://metamask.io/" target="_blank"> MetaMask </a> environment.
+          <br> <br>
+          <div id="check-status" class="alert alert-success" style="display:none;width: 80%">
+            Your MetaMask wallet is installed well and your address is <a href="" target="_blank" id="ac_addrsss">1</a>
+          </div>
+        </p>
+      </div>
+      <div class="node" id="node2" style="display: ''">
+        <h3><span class="myicon-tick-uncheck" id="myicon2"></span></h3>
+        <p> 3.2. Please check the below certificate-tracer smart contract, we recommend you to use <a href="https://remix.ethereum.org/#optimize=false&version=builtin"> Remix </a> to analysis and debug the code.</p>
+        <pre style="width: 99%; overflow-y: auto; overflow-x: hidden; height: 180px;">
+                  pragma solidity ^0.4.18;
+                    contract AuditTracer {
+                     
+                        // The address of the account that created this ballot.
+                        address public tracerCreator;
+                        mapping (address => uint256) private CredentialTraceTimes;
+                        mapping (address => uint256) private CredentialTraceResults;
+                        
+                        mapping (address => uint256) private IdentityTraceTimes;
+                        mapping (address => uint256) private IdentityTraceResults;
+                      
+                      uint public p;
+                        uint public q;
+                        uint private xt;
+                        uint public yt;
+                    
+                        constructor() public {
+                            tracerCreator = msg.sender;
+                        }
+                     
+                        event trace_log(
+                            string information,
+                            address indexed sender,
+                            uint timestamp,
+                            uint calltimes,
+                            uint obj
+                        );
+                        
+                        function credential_tracing_log(uint obj) internal {
+                             emit trace_log("credential_tracing_log", msg.sender, now, CredentialTraceTimes[msg.sender], obj);
+                        }
+                        
+                        function identity_tracing_log(uint obj) internal {
+                             // print logs
+                             emit trace_log("credential_tracing_log", msg.sender, now, IdentityTraceTimes[msg.sender], obj);
+                        }
+                      
+                      function register_parameter(uint _q, uint _N, uint _g, uint _p) public{   
+                            xt = rand_less_than(_q,_N);
+                            yt = quick_power(_g,xt,_p);
+                            p = _p;
+                            q = _q;
+                        }
+                      
+                      function get_public_key() public view returns(uint){  
+                        return yt;
+                      }
+                      
+                      function credential_tracing() public returns(uint){
+                              CredentialTraceTimes[msg.sender] += 1;
+                          return CredentialTraceResults[msg.sender];
+                      }
+                      
+                      function identity_tracing() public returns(uint){
+                              CredentialTraceTimes[msg.sender] += 1;
+                          return CredentialTraceResults[msg.sender];
+                      }
+                    
+                      // trace the credential
+                        function credential_calculating(uint xiupsilon) public returns(uint){
+                          if (CredentialTraceTimes[msg.sender] == 0){
+                                CredentialTraceResults[msg.sender] = quick_power(xiupsilon, xt, p);
+                            }
+                            //CredentialTraceTimes[msg.sender] += 1;
+                            credential_tracing_log(xiupsilon);
+                        }
+                        
+                        // trace the identity
+                        function identity_calculating(uint zeta1) public{
+                            if (IdentityTraceTimes[msg.sender] == 0){
+                                uint nxt = quick_power(xt, q - 2, q);
+                                IdentityTraceResults[msg.sender] = quick_power(zeta1, nxt, p);
+                            }
+                            IdentityTraceTimes[msg.sender] += 1;
+                            identity_tracing_log(zeta1);
+                        }
+                        
+                        // Math helper functions
+                        function rand_less_than(uint upper_bound, uint nbits) private returns(uint){
+                            uint r = PRNG(nbits);
+                            if(r < upper_bound){
+                                return r;
+                            }
+                            rand_less_than(upper_bound,nbits);
+                        }
+                    
+                        function quick_power(uint a, uint b, uint m) private returns(uint){
+                          uint result = 1;
+                          for(uint count = 1; count <= b; count*=2){
+                              if(b & count != 0){
+                                  result = mulmod(result, a, m);
+                              }
+                              a = mulmod(a, a, m);
+                          }
+                          return result;
+                        }
+                    
+                        function PRNG(uint nbits) private returns(uint) {
+                            if(nbits == 40){
+                                return uint40(uint256(keccak256(abi.encodePacked(msg.sender,now))));
+                            } else if (nbits == 80){
+                                return uint80(uint256(keccak256(abi.encodePacked(msg.sender,now))));
+                            }
+                            return uint(uint256(keccak256(abi.encodePacked(msg.sender,now))));
+                            //, blockhash(block.number - 1)
+                        }
+                    
+                    }
+          </pre>          
+      </div>
+      <div class="node" id="node3" style="display: ''">
+        <h3><span class="myicon-tick-uncheck" id="myicon3"></span></h3>
+        <p> 3.3. Please click <a href="javascript: void(0)" class="" onclick="deploy()">here</a> to compile and deploy the smart contract.
+          <br> <br>
+          <div id="compile-status" class="alert alert-success" style="display:none;width: 80%">
+            The smart contract is compiled successfully. The compiled code is <input id="sm_code"></input>
+          </div>
+          <div id="deploy-status" class="alert alert-success" style="display:none;width: 80%">
+            The smart contract is deployed successfully. The address is <a href="" target="_blank" id="sm_addrsss"></a>
+          </div>
+        </p>
+      </div>
+      <div class="node" id="node4" style="display: ''">
+        <h3><span class="myicon-tick-uncheck" id="myicon4"></span></h3>
+        <p>3.4. Please click <a href="javascript: void(0)" onclick="register()" id="register_parameter">here</a> to register parameters to the privacy-preserving smart contract. <br><br>
+          <div id="register-status" class="alert alert-success" style="display:none;width: 80%">
+            The parameters are registered successfully.
+          </div>
+        </p>
+      </div>
+      <div class="node" id="node5" style="display: ''">
+        <h3><span class="myicon-tick-uncheck" id="myicon5"></span></h3>
+        <p>3.5. Please click <a href="javascript: void(0)" onclick="get_public_key()">here</a> to get the tracer's public key. <br><br>
+          <div id="publickey-status" class="alert alert-success" style="display:none;width: 80%">
+            Ttracer's public key is obtained successfully and tracer's public key is <input id="yt"></input>
+          </div>
+        </p>
+      </div>
+      <div class="node" id="node6" style="display: ''">
+        <h3><span class="myicon-tick-uncheck" id="myicon6"></span></h3>
+        <p>3.6. Congratulations!!!, you finished all the registrations. Please click Issuing to continue
+          next issuing steps.
+      </div>
+    </div>
+  </div>
+  <br><br>
+  4. Identity Registration(optional)
+  <hr>
+  <!-- <div class="timeline-end">End</div> -->
+  </section>
+  <!-- // Vertical Timeline -->
+  <script>
+  renderMathInElement(document.body, {
+    delimiters: [{
+      left: "$$",
+      right: "$$",
+      display: true
+    }, {
+      left: "$",
+      right: "$",
+      display: false
+    }]
+  });
+  </script>
+</body>
+
+</html>
