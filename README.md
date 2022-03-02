@@ -82,8 +82,6 @@ For more details, we refer the reader to [Elliptic_Curves_192_result](./test/res
 |Integers Group 256 |0.02839|0.000245|0.00008|0.00041|0.00038|
 |Integers Group 1024|2.28698|0.006368|0.00296|&times;|&times;|
 
-~~Unfortunately, due to the limitation of the timestamp in the smart contract, the performance approach for [Credential tracing] and [Identity tracing] is relatively rough. This approach is represented as the total client waiting time excluding the network request and response time.~~
-
 We use a simulation-based testing approach to test the code execution in a smart contract. We first simulate the network request and response time NT1 with calling an empty function in the smart contract. Then, we simulate the network request and response time NT2 with calling a function that covers the code. Lastly, the code execution time is represented as NT2 getting rid of NT1. The below picture shows the part of the test record according to our new testing method.
 
 <div align="center">
